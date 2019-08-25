@@ -124,12 +124,14 @@
 
 						<p class="fragment">Comments provide a way to insert metainformation about code intended for people, right next to the code:</p>
 
+						<div style="font-size:35px">
 						<pre><code data-trim class="python fragment">
 							def the_function(var):
 								"""This is a docstring, where a function definition might live"""
 								a = 1 + var # this is a simple comment
 								return a
 						</code></pre>
+						</div>
 
 					</section>
 
@@ -139,19 +141,22 @@
 
 						<p class="fragment">Also possible to pollute code with unnecessary cruft:</p>
 
+						<div style="font-size:35px">
 						<pre><code data-trim class="python fragment">
 							def decay(index, database):
 								# first, retrieve the decay constants from the database
 								mylist = database.decay_constants()
 								# next, try to access an element of the list
 								try:
-									d = mylist[index] # gets decay constant at index in the list
+									# gets decay constant at index in the list
+									d = mylist[index]
 								# if the index doesn't exist
 								except IndexError:
 									# throw an informative error message
 									raise Exception("value not found in the list")
 								return d
 						</code></pre>
+						</div>
 
 					</section>
 
@@ -164,15 +169,18 @@
 							help explain reasons or complicated sections:
 						</p>
 
+						<div style="font-size:35px">
 						<pre><code data-trim class="python fragment">
 							def decay(index, database):
 								lambdas = database.decay_constants()
 								try:
-									lambda_i = lambdas[index] # gets decay constant at index in the list
+									# gets decay constant at index in the list
+									lambda_i = lambdas[index]
 								except IndexError:
 									raise Exception("value not found in the list")
 								return lambda
 						</code></pre>
+						</div>
 
 					</section>
 				</section>
@@ -200,7 +208,7 @@
 						<h4>Guidelines for naming:</h4>
 						<br/>
 
-						<pre><code data-trim class="python">
+						<pre class="stretch"><code data-trim class="python">
 							# packages and modules are short and lowercase
 							packages
 							modules
